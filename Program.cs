@@ -6,7 +6,19 @@ namespace SkaraItseyChallenge1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var name = "";
+
+            while (name != "itsey")
+            {
+                Console.WriteLine("What is your name?");
+                name = Console.ReadLine();
+
+                if (name != "itsey")
+                {
+                    Console.WriteLine("You are not authorised {0}", name);
+                }
+            }
+            Console.WriteLine("Welcome back {0}", name);
         }
     }
 }
