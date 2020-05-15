@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plisky.Diagnostics" Version="2.8.2" />
+    <PackageReference Include="Plisky.Listeners" Version="2.8.2" />
+    <PackageReference Include="Plisky.Plumbing" Version="1.7.0" />
+    <PackageReference Include="Plisky.Testing" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>
