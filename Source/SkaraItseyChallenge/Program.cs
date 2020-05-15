@@ -5,6 +5,7 @@ namespace SkaraItseyChallenge1 {
         static void Main(string[] args) {
             var name = "";
 
+
             while (name != "itsey") {
                 Console.WriteLine("What is your name?");
                 name = Console.ReadLine();

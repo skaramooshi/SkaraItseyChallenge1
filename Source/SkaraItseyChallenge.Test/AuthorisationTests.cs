@@ -1,5 +1,6 @@
 using Plisky.Diagnostics;
 using Plisky.Test;
+using SkaraItseyChallenge1;
 using System;
 using Xunit;
 
@@ -16,8 +17,9 @@ namespace SkaraItseyChallenge.Test {
 
             string userName = "itsey";
             bool loggedIn = false;
-
-            // TODO : Implement Login Call here
+            
+            Authorisation a = new Authorisation();
+            loggedIn = a.IsValid(userName);
 
             Assert.True(loggedIn, "Good UserName Must Login");
         }
@@ -31,7 +33,8 @@ namespace SkaraItseyChallenge.Test {
             string userName = "mrHaxxor";
             bool loggedIn = false;
 
-            // TODO : Implement Login Call Here
+            Authorisation a = new Authorisation();
+            loggedIn = a.IsValid(userName);
 
             Assert.False(loggedIn, "Bad UserName Must Not Login");
         }
@@ -44,10 +47,12 @@ namespace SkaraItseyChallenge.Test {
         public void NullLogin_ThrowsException() {
             b.Info.Flow();
             
-            string userName = string.Empty;            
+            string userName = string.Empty;
+            Authorisation a = new Authorisation();
 
             Assert.Throws<ArgumentNullException>(() => {
-                // TODO : Implement Login Call here
+                // TODO : Implement Login Call here                
+                a.IsValid(userName);
             });
         }
 
@@ -58,9 +63,10 @@ namespace SkaraItseyChallenge.Test {
         public void EmptyLogin_ThrowsException() {
             b.Info.Flow();
             string userName = string.Empty;
+            Authorisation a = new Authorisation();
 
             Assert.Throws<ArgumentOutOfRangeException>(() => {
-                // TODO : Implement Login Call here
+                a.IsValid(userName);
             });
         }
     }
